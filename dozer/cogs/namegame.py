@@ -631,7 +631,7 @@ class NameGame(Cog):
         """Gives a player a strike."""
         if game.strike(player):
             await ctx.send(f"Player {player.mention} is ELIMINATED!")
-        if len(game.players) == 0 or game.turn_count <= 6:
+        if len(game.players) == 0:
             await ctx.send("Game disbanded, no winner called!")
             game.running = False
         if game.check_win():
